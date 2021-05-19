@@ -1,0 +1,57 @@
+{{> navbar}}
+
+<section class="hero hero-bg d-flex justify-content-center align-items-center">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="container">
+
+                <div class="d-flex justify-content-center h-100">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="text-white text-center card-title">Recuperar Contraseña</h3>
+                        </div>
+                        <div class="card-header">
+
+                            {{#if mensaje}}
+
+                            <h3 style="color:red">{{mensaje}}</h3>
+                            {{/if}}
+                        </div>
+
+                        <div class="card-body">
+                            <form action="/recuperarFinal/{{token}}" method="post">
+
+                                
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    </div>
+                                    <input type="password" name="password" id="password" class="form-control"
+                                        placeholder="Nueva Contraseña">
+                                </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    </div>
+                                    <input type="password" name="password2" id="password2" class="form-control"
+                                        placeholder="Confirmar Contraseña">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn float-right btn-warning ">Recuperar
+                                        Contraseña</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

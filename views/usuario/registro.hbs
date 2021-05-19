@@ -1,0 +1,152 @@
+{{> header}}
+{{> navregis}}
+
+<section class="hero hero-bg d-flex justify-content-center align-items-center">
+	
+	<div class="container">
+{{#if mensaje}}
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		{{mensaje}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{{/if}}
+		<div class="row">
+
+			<div class="container">
+
+				<div class="d-flex justify-content-center h-100">
+
+					<div class="card-group" style="background-color: rgba(0, 0, 0, 0.377);">
+						<div class="card-header">
+							<h3 class="text-white text-center card-title">Registrate</h3>
+						</div>
+						<div class="card-header">
+
+							{{#if mensaje}}
+
+							<h3 style="color:red">{{mensaje}}</h3>
+							{{/if}}
+						</div>
+
+						<div class="card-body" >
+							<form action="/registroPost" method="post">
+
+                                 <div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-user"></i></span>
+									</div>
+									<input type="text" class="form-control" name="nombre" id="nombre"
+										placeholder="Nombre(s)" value="">
+								</div>
+
+                                <div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+									</div>
+									<input type="text" class="form-control" name="appPaterno" id="appPaterno"
+										placeholder="Apellido Paterno" value="">
+                                    <input type="text" class="form-control" name="appMaterno" id="appMaterno"
+										placeholder="Apellido Materno" value="">
+								</div>
+
+                                <div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
+									</div>
+									<input type="email" class="form-control" name="email" id="email"
+										placeholder="Correo Electrónico" value="">
+								</div>
+
+                                <div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-image"></i></span>
+									</div>
+									<input type="text" class="form-control" name="rutaFoto" id="rutaFoto"
+										placeholder="Foto de perfil" value="">
+								</div>
+
+								<div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-key"></i></span>
+									</div>
+									<input type="password" name="contrasena" id="contrasena"
+										class="form-control" placeholder="Contraseña" value="">
+                                    <input type="password" name="contrasena2" id="contrasena2"
+										class="form-control" placeholder="Confirmar Contraseña" value="">
+								</div>
+
+                                <div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-graduation-cap"></i></span>
+									</div>
+                                    <select name="nivelEducativo" id="nivelEducativo"
+										class="form-control" value="">
+                                        <option/>Bachillerato</option>
+                                    </select>
+
+                                    <div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-building"></i></span>
+									</div>
+                                    <select name="institucion" id="institucion"
+										class="form-control" value="">
+                                        <option/>CBTis.75</option>
+                                    </select>
+								</div>
+
+                                <div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-briefcase"></i></span>
+									</div>
+                                  <select name="especialidad" id="especialidad"
+										class="form-control" value="">
+                                    <option />Administración de Recursos Humanos</option>
+                                    <option />Contabilidad</option>
+                                    <option />Eléctricidad</option>
+                                    <option />Lógistica</option>
+                                    <option />Mécanica</option>
+                                    <option />Programación</option>
+                                    <option />Soporte y Mantenimiento a equipo de cómputo</option>
+                                </select>
+								</div>
+
+                                <div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class=""></i></span>
+									</div>
+									<select name="semestre" id="semestre"
+										class="form-control" value="">
+                                        <option />1</option>
+                                        <option />2</option>
+                                        <option />3</option>
+                                        <option />4</option>
+                                        <option />5</option>
+                                        <option />6</option>
+                                    </select>
+
+                                    <div class="input-group-prepend">
+										<span class="input-group-text"><i class=""></i></span>
+									</div>
+                                    <select name="turno" id="turno"
+										class="form-control" value="">
+                                        <option />Matutino</option>
+                                        <option />Vespertino</option>
+                                        <option />Diurno</option>
+                                    </select>
+								</div>
+
+								<div class="form-group">
+                                    <a href="/" class="btn float-right btn btn-danger">Cancelar</a>   
+									<button type="submit" class="btn float-right btn-success">Aceptar</button>
+								</div>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>

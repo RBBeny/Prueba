@@ -1,0 +1,56 @@
+{{> navbar}}
+
+<section class="hero hero-bg d-flex justify-content-center align-items-center">
+	
+	<div class="container">
+{{#if mensaje}}
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		{{mensaje}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{{/if}}
+		<div class="row">
+
+			<div class="container">
+
+				<div class="d-flex justify-content-center h-100">
+
+					<div class="card">
+						<div class="card-header">
+							<h3 class="text-white text-center card-title">Recuperar Contraseña</h3>
+						</div>
+						<div class="card-header">
+
+							{{#if mensaje}}
+
+							<h3 style="color:red">{{mensaje}}</h3>
+							{{/if}}
+						</div>
+
+						<div class="card-body">
+							<form action="/recuperar" method="post">
+
+								<div class="input-group form-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
+									</div>
+									<input type="email" class="form-control" name="email" id="email"
+										placeholder="Correo Electrónico" value="">
+
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn float-right btn-warning ">Recuperar
+										Contraseña</button>
+								</div>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
